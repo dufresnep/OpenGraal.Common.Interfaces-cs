@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F35CB43B-DCA8-4283-900A-2923C7C67483}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -12,6 +10,7 @@
     <AssemblyName>OpenGraal.Common.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ReleaseVersion>0.0.0.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,8 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\IGaniObj.cs" />
+    <Compile Include="INPC.cs" />
     <Compile Include="Players\IPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\opengraal.core-cs\trunk\OpenGraal.Core\OpenGraal.Core.csproj">
+      <Project>{cc4af8b5-becf-4562-a0e5-94fbe0fbab8f}</Project>
+      <Name>OpenGraal.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
